@@ -1,8 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
+	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 )
@@ -19,5 +21,7 @@ func main() {
 		log.Fatalf("Failed to interact with contarct %v", err)
 	}
 
-	log.Printf("Owners: %v", contract.GetOwners())
+	owners, _ := contract.GetOwners(&bind.CallOpts{})
+
+	fmt.Println(owners)
 }

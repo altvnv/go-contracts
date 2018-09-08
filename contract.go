@@ -7,9 +7,10 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/dzeckelev/ethereum-front/abi"
+//	"github.com/dzeckelev/ethereum-front/abi"
 	ethereum "github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	abi "github.com/ethereum/go-ethereum/accounts/abi"
+	bind "github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/event"
